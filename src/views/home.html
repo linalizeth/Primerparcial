@@ -2,5 +2,9 @@
 {% block titulo %} Inicio {% endblock %}
 
 {% block contenido %} 
-    <p>aqui va el contenido</p>
+    {% for db in basedatos %}
+        <li>
+            <a href="{{ url_for('verTablas', nombre=db[0]) }}">{{db[0]}}</a>
+        </li>
+    {% endfor %}
 {% endblock %}

@@ -4,8 +4,6 @@ import json
 import src.config.globals as globals
 
 CONEXION_PATH = path.abspath('src/config/conexion.json')
-SQL_PATH = path.abspath('DB.sql')
-
 
 def createDB():
     if path.exists(CONEXION_PATH):

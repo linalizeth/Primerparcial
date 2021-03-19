@@ -1,0 +1,29 @@
+{% block header_title %} Descripcion {% endblock %}
+
+{% block contents %} 
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Campo</th>
+                <th>Tipo</th>
+                <th>permitirNull</th>
+                <th>Key</th>
+                <th>fefault</th>
+                <th>extra</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            {% for descripcion in Descripcion %}
+                <tr>
+                    <td >{{ descripcion[0] }}</td>
+                    <td>{{ descripcion[1] }}</td>
+                    <td>{{ descripcion[2] }}</td>
+                    <td >{{ descripcion[3] }}</td>
+                    <td >{{ descripcion[4] }}</td>
+                    <td >{{ descripcion[5] }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}

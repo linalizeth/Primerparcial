@@ -1,5 +1,5 @@
 from flask import redirect, request, url_for
-from src.config.db import createDB, installDB
+from src.config.db import createDB
 from src import app
 import json
 
@@ -23,6 +23,6 @@ def configuracion():
     file.close()
 
     createDB()
-    installDB()
+    
 
     return redirect(url_for('index'))
